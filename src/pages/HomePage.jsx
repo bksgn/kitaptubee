@@ -1,4 +1,4 @@
-﻿// src/pages/HomePage.jsx
+// src/pages/HomePage.jsx
 import { useState } from 'react'
 import BookCard from '../components/BookCard'
 
@@ -16,7 +16,13 @@ export default function HomePage({ books, favs, likes, comments, userLiked, like
     <>
       <div className="hero">
         <p className="hero-eye">✦ Dijital Kütüphane ✦</p>
-        <h1 className="hero-title">KitapTube<br /><em>ile</em> Oku</h1>
+        <h1 className="hero-title">
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem', justifyContent: 'center' }}>
+            KitapTube
+            <img src="/logo.png" alt="Logo" className="hero-logo-img" />
+          </span>
+          <br /><em>ile</em> Oku
+        </h1>
         <p className="hero-sub">Yüzlerce kitap, tek platformda. Oku, dinle, keşfet.</p>
         <div className="search-wrap">
           <span className="si">🔍</span>

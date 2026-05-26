@@ -9,6 +9,8 @@ import MemberAddPage from './pages/MemberAddPage'
 import ProfilePage from './pages/ProfilePage'
 import FavPage from './pages/FavPage'
 import AuthModal from './components/AuthModal'
+import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import { initials } from './utils/storage'
 import { generateSlug } from './utils/slugify'
 
@@ -73,8 +75,8 @@ export default function App() {
     <>
       <nav>
         <Link to="/" className="nav-logo">
-          <img src="/logo.png" alt="KitapTube" className="nav-logo-img" />
           <span>KitapTube</span>
+          <img src="/logo.png" alt="KitapTube" className="nav-logo-img" />
         </Link>
         <Link to="/" className={`nav-btn${location.pathname === '/' ? ' active' : ''}`}>🏠 Ana Sayfa</Link>
         <Link to="/favoriler" className={`nav-btn${location.pathname === '/favoriler' ? ' active' : ''}`}>♥ Favoriler</Link>
@@ -179,7 +181,8 @@ export default function App() {
       )}
 
       <div className={`toast${toast.on ? ' on' : ''}`}>{toast.msg}</div>
-      <footer><strong>KitapTube</strong> © 2024</footer>
+      <ScrollToTop />
+      <Footer />
     </>
   )
 }

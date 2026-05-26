@@ -14,6 +14,7 @@ export default function ReadPage({ book, curUser, adminIn, likes, comments, onBa
   const barRef = useRef(null)
 
   useEffect(() => { setChIdx(0); setTtsOn(false); setPaused(false); setBarW(0); setTtsLbl('Dinlemek için ▶ butonuna basın') }, [book])
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [book?.id])
 
   if (!book) return null
 

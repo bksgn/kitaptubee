@@ -3,8 +3,8 @@ export function generateSlug(author, title) {
     'ç': 'c', 'ğ': 'g', 'ı': 'i', 'ö': 'o', 'ş': 's', 'ü': 'u',
     'Ç': 'c', 'Ğ': 'g', 'İ': 'i', 'Ö': 'o', 'Ş': 's', 'Ü': 'u'
   }
-  const str = `${author}-${title}`.toLowerCase()
-    .replace(/[çğıöşü]/g, match => trMap[match] || match)
+  const str = `${title}`.toLowerCase()
+    .replace(/[çğıöşüÇĞİÖŞÜ]/g, match => trMap[match] || match)
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
   return str
