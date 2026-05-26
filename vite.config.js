@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/KitapTube/',
+  base: '/kitaptubee/',
   server: { port: 3000 },
 })
